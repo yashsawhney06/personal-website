@@ -1,0 +1,1 @@
+Add your project images (e.g., project1.png), favicon.svg, and preview.png for social sharing in this folder. 
