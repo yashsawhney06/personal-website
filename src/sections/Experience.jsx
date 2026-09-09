@@ -19,6 +19,7 @@ const EXPERIENCES = [
     company: 'Saama Technologies',
     role: 'Machine Learning Intern',
     dates: 'Jun 2023 – Aug 2023',
+    logo: '/saama-logo.jpg',
     domain: 'saama.com',
     monogram: 'S',
   },
@@ -38,12 +39,13 @@ const EXPERIENCES = [
   },
 ];
 
-function Logo({ domain, monogram }) {
-  const [failed, setFailed] = useState(!domain);
+function Logo({ logo, domain, monogram }) {
+  const initialSrc = logo || (domain ? `https://icons.duckduckgo.com/ip3/${domain}.ico` : null);
+  const [src, setSrc] = useState(initialSrc);
 
-  if (failed) {
+  if (!src) {
     return (
-      <span className="flex-shrink-0 w-12 h-12 rounded-lg bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 flex items-center justify-center text-xs font-semibold text-gray-700 dark:text-gray-200">
+      <span className="flex-shrink-0 w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-xs font-semibold text-[color:var(--accent)]">
         {monogram}
       </span>
     );
@@ -51,10 +53,10 @@ function Logo({ domain, monogram }) {
 
   return (
     <img
-      src={`https://icons.duckduckgo.com/ip3/${domain}.ico`}
+      src={src}
       alt=""
-      onError={() => setFailed(true)}
-      className="flex-shrink-0 w-12 h-12 rounded-lg bg-white object-contain p-1.5 border border-gray-300 dark:border-gray-700"
+      onError={() => setSrc(domain && src === logo ? `https://icons.duckduckgo.com/ip3/${domain}.ico` : null)}
+      className="flex-shrink-0 w-12 h-12 rounded-lg bg-white object-contain p-1.5 border border-gray-200 dark:border-gray-700"
     />
   );
 }
@@ -62,7 +64,7 @@ function Logo({ domain, monogram }) {
 function Card({ exp }) {
   return (
     <div className="flex items-center gap-4 w-80 flex-shrink-0 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 px-5 py-4">
-      <Logo domain={exp.domain} monogram={exp.monogram} />
+      <Logo logo={exp.logo} domain={exp.domain} monogram={exp.monogram} />
       <div className="min-w-0">
         <p className="font-semibold leading-tight truncate">{exp.company}</p>
         <p className="text-sm text-gray-700 dark:text-gray-300 truncate">{exp.role}</p>
