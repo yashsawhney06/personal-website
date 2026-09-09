@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from '../components/Reveal';
 
 const PROJECTS = [
   {
@@ -37,15 +38,15 @@ const PROJECTS = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="max-w-5xl mx-auto px-4 py-16">
-      <h2 className="text-2xl font-bold mb-8 text-center">Portfolio</h2>
-      
+    <section id="portfolio" className="max-w-5xl mx-auto px-4 py-24">
+      <Reveal as="h2" className="text-2xl font-bold mb-8 text-center">Portfolio</Reveal>
+
       <div className="grid md:grid-cols-3 gap-8">
         {PROJECTS.map((project, i) => (
-          <div
+          <Reveal
             key={project.title}
+            delay={i * 90}
             className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-300 glow-card"
-            style={{ animationDelay: `${i * 100}ms` }}
           >
             <div className="h-40 bg-gray-200 dark:bg-gray-800">
               <img
@@ -70,12 +71,12 @@ export default function Portfolio() {
                 )}
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 
       {/* Resume Download Section */}
-      <div className="text-center mt-16">
+      <Reveal className="text-center mt-16">
         <p className="text-gray-900 dark:text-white font-semibold text-lg mb-4">
           Want the full picture? My resume covers my internships, projects, and coursework in detail.
         </p>
@@ -90,7 +91,7 @@ export default function Portfolio() {
           </svg>
           Download Resume
         </a>
-      </div>
+      </Reveal>
     </section>
   );
 } 
