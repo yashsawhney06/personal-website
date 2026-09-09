@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Nunito', 'ui-rounded', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Fredoka', 'Nunito', 'ui-rounded', 'sans-serif'],
+        display: ['Comfortaa', 'Nunito', 'ui-rounded', 'sans-serif'],
       },
     },
   },
