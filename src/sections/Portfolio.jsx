@@ -3,7 +3,7 @@ import React from 'react';
 const PROJECTS = [
   {
     title: 'PokeMarkets!',
-    image: '/pokemarkets-project.png',
+    image: '/pokemarkets-project.jpg',
     description: 'A Kafka-decoupled ELT pipeline that scrapes and normalizes Pokémon card sale comps from TCGPlayer and eBay, resolving 1,000+ card names via fuzzy entity matching and modeling historical valuation trends with weighted-median aggregation.',
     tech: ['Python', 'Next.js', 'PostgreSQL', 'Kafka', 'Chart.js'],
     github: null,
