@@ -3,21 +3,37 @@ import React from 'react';
 const SKILLS_DATA = {
   Languages: [
     { name: 'Python', icon: '🐍' },
+    { name: 'SQL / T-SQL', icon: '🗄️' },
     { name: 'Java', icon: '☕' },
-    { name: 'HTML/CSS', icon: '🌐' }
+    { name: 'TypeScript', icon: '🟦' },
+    { name: 'JavaScript', icon: '🟨' }
   ],
-  Libraries: [
-    { name: 'Pandas', icon: '🐼' },
-    { name: 'NumPy', icon: '🔢' },
-    { name: 'Matplotlib', icon: '📊' },
-    { name: 'Sklearn', icon: '🤖' },
-    { name: 'PyTorch', icon: '🔥' }
+  'Data & Infra': [
+    { name: 'Kafka', icon: '🔀' },
+    { name: 'Azure', icon: '☁️' },
+    { name: 'Spark', icon: '⚡' },
+    { name: 'Databricks', icon: '🧱' },
+    { name: 'dbt', icon: '🔧' },
+    { name: 'Airflow', icon: '🌬️' },
+    { name: 'Snowflake', icon: '❄️' },
+    { name: 'PostgreSQL', icon: '🐘' },
+    { name: 'Docker', icon: '🐳' },
+    { name: 'Kubernetes', icon: '☸️' }
+  ],
+  'ML & AI': [
+    { name: 'PyTorch', icon: '🔥' },
+    { name: 'XGBoost', icon: '🌲' },
+    { name: 'scikit-learn', icon: '🤖' },
+    { name: 'LangChain', icon: '🔗' },
+    { name: 'NLP', icon: '💬' },
+    { name: 'Clustering', icon: '🧩' }
   ],
   Frameworks: [
     { name: 'React', icon: '⚛️' },
+    { name: 'Next.js', icon: '▲' },
+    { name: 'FastAPI', icon: '🚀' },
     { name: 'Node.js', icon: '🟢' },
-    { name: 'Flask', icon: '🍶' },
-    { name: 'JUnit', icon: '🧪' }
+    { name: 'Flask', icon: '🍶' }
   ],
 };
 

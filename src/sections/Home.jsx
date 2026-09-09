@@ -42,7 +42,7 @@ const SocialIcons = () => {
 }
 
 export default function Home() {
-    const roles = ["a Computer Science and Economics Student", "a Product/Software Engineer", "a Tech/Management Enthusiast"];
+    const roles = ["a Computer Science and Economics Student", "a Data & Software Engineer", "a Product & Tech Enthusiast"];
     const typedRoles = useTypingEffect(roles, true);
 
   return (
@@ -58,7 +58,7 @@ export default function Home() {
             <span className="cursor-blink">|</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
-            I am a passionate computer science and economics student with a love for building software and managing products that solve real-world problems!
+            I am a computer science and economics student who builds data pipelines, trains ML models, and ships products that solve real-world problems!
           </p>
           <p className="text-cyan-400 font-medium text-lg glow-text">
             Welcome to my portfolio <span role="img" aria-label="wave">👋🏻</span>

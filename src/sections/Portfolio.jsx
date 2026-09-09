@@ -2,17 +2,25 @@ import React from 'react';
 
 const PROJECTS = [
   {
-    title: 'Crypto Volatility Forecasting (Coming Soon!)',
-    image: '/crypto-project.png',
-    description: 'Predicting cryptocurrency price movements and modeling market volatility using time series forecasting (LSTM, ARIMA) and financial risk models (GARCH).',
-    tech: ['Python', 'Flask', 'React', 'LSTM Models'],
+    title: 'PokeMarkets!',
+    image: '/pokemarkets-project.png',
+    description: 'A Kafka-decoupled ELT pipeline that scrapes and normalizes Pokémon card sale comps from TCGPlayer and eBay, resolving 1,000+ card names via fuzzy entity matching and modeling historical valuation trends with weighted-median aggregation.',
+    tech: ['Python', 'Next.js', 'PostgreSQL', 'Kafka', 'Chart.js'],
+    github: null,
+    demo: '#',
+  },
+  {
+    title: 'SwipeWise',
+    image: '/swipewise-project.png',
+    description: 'A credit-card portfolio optimizer that computes net annual value across 55 cards and 6 spend categories via greedy selection, paired with a FastAPI recommendation API that validates spend profiles with Pydantic and uses LangChain to generate per-category tradeoffs.',
+    tech: ['Python', 'FastAPI', 'LangChain', 'Pydantic'],
     github: null,
     demo: '#',
   },
   {
     title: 'NBA Shot Progression',
     image: '/nba-project.png',
-    description: 'Developed a machine learning model using YOLOv8 for object detection and XGBoost for shot prediction. The system analyzes defender positions and player statistics to predict NBA shot success rates with accuracy.',
+    description: 'A machine learning model using YOLOv8 for object detection and XGBoost for shot prediction. The system analyzes defender positions and player statistics to predict NBA shot success rates.',
     tech: ['Python', 'OpenCV', 'Sklearn', 'NBA API'],
     github: 'https://github.com/yashsawhney06/nba-shot-progression',
     demo: '#',
@@ -53,15 +61,7 @@ export default function Portfolio() {
               />
             </div>
             <div className="p-6 flex-1 flex flex-col">
-              <h3 className="font-semibold text-lg mb-2">
-                {project.title === 'Crypto Volatility Forecasting (Coming Soon!)' ? (
-                  <>
-                    Crypto Volatility Forecasting <span className="text-sm font-normal">(Coming Soon!)</span>
-                  </>
-                ) : (
-                  project.title
-                )}
-              </h3>
+              <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
               <div className="mb-4 flex flex-wrap gap-2">
                 {project.tech.map(t => (
@@ -83,7 +83,7 @@ export default function Portfolio() {
       {/* Resume Download Section */}
       <div className="text-center mt-16">
         <p className="text-cyan-400 font-medium text-lg mb-4">
-          Take a look at my resume to learn more about my experience and skills!
+          Want the full picture? My resume covers my internships, projects, and coursework in detail.
         </p>
         <a 
           href="/Yash-Sawhney Resume.pdf" 
