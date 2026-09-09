@@ -41,7 +41,7 @@ const SKILLS_DATA = {
 export default function Skills() {
   return (
     <section id="skills" className="max-w-4xl mx-auto px-4 py-24">
-      <Reveal as="h2" className="text-3xl font-bold mb-10 text-center">Technical Skills</Reveal>
+      <Reveal as="h2" className="text-3xl md:text-4xl font-semibold mb-10 text-center tracking-tight">Technical Skills</Reveal>
       <Reveal className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 md:p-10 transition-colors flex flex-col gap-8">
         {Object.entries(SKILLS_DATA).map(([category, skills]) => (
           <div key={category}>

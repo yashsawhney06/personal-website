@@ -81,7 +81,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24">
       <Reveal>
-        <h2 className="text-2xl font-bold mb-8 text-center">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center tracking-tight">Experience</h2>
         <div className="marquee-mask overflow-hidden">
           <div className="marquee-track gap-6 py-2">
             {loop.map((exp, i) => (

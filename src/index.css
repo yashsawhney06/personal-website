@@ -17,13 +17,24 @@ html, body {
 
 body {
   transition: background-color 0.3s, color 0.3s;
-  font-family: 'EB Garamond', ui-serif, Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: var(--bg);
+  font-size: 17px;
+  line-height: 1.47;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, .font-display {
-  font-family: 'EB Garamond', ui-serif, Georgia, serif;
-  letter-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  letter-spacing: -0.021em;
+  font-weight: 600;
+}
+
+h1 {
+  letter-spacing: -0.03em;
 }
 
 /* Steel-blue accent + Apple-style neutral surfaces */
@@ -97,23 +108,34 @@ h1, h2, h3, h4, .font-display {
   z-index: -1;
 }
 
-/* Accent buttons */
+/* Accent buttons (Apple-style pills) — fixed steel so white text always reads */
+:root {
+  --btn: #4a6a8a;
+  --btn-hover: #3a5470;
+}
+.dark {
+  --btn: #5b7fa0;
+  --btn-hover: #6f92b0;
+}
 .btn-outline-accent {
-  border: 2px solid var(--accent);
+  border: 1px solid var(--btn);
   color: var(--accent);
+  border-radius: 980px;
   transition: background-color 0.2s, color 0.2s;
 }
 .btn-outline-accent:hover {
-  background-color: var(--accent);
+  background-color: var(--btn);
+  border-color: var(--btn);
   color: #fff;
 }
 .btn-solid-accent {
-  background-color: var(--accent);
+  background-color: var(--btn);
   color: #fff;
+  border-radius: 980px;
   transition: background-color 0.2s;
 }
 .btn-solid-accent:hover {
-  background-color: var(--accent-strong);
+  background-color: var(--btn-hover);
 }
 
 @keyframes fadeIn {

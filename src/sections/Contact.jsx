@@ -46,7 +46,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="max-w-2xl mx-auto px-4 py-24">
-      <Reveal as="h2" className="text-2xl font-bold mb-8 text-center">Contact</Reveal>
+      <Reveal as="h2" className="text-3xl md:text-4xl font-semibold mb-10 text-center tracking-tight">Contact</Reveal>
       <Reveal>
       <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 md:p-10 flex flex-col gap-4">
         <input
@@ -56,7 +56,7 @@ export default function Contact() {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 transition"
+          className="px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] transition"
         />
         <input
           type="email"
@@ -65,7 +65,7 @@ export default function Contact() {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 transition"
+          className="px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] transition"
         />
         <textarea
           name="message"
@@ -74,12 +74,12 @@ export default function Contact() {
           rows="4"
           placeholder="Your Message"
           required
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 transition"
+          className="px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] transition"
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-solid-accent font-semibold py-2 rounded mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-solid-accent font-semibold py-3 px-6 mt-2 self-center disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>

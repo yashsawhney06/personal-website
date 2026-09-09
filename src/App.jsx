@@ -68,7 +68,7 @@ export default function App() {
       <AmbientBackground />
       <nav className="fixed w-full z-20 top-0 left-0 bg-[#fbfbfd]/80 dark:bg-black/70 backdrop-blur border-b border-gray-200 dark:border-gray-800 transition-colors">
         <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
-          <a href="#home" className="font-bold text-lg tracking-tight">Yash Sawhney</a>
+          <a href="#home" className="font-semibold text-[15px] tracking-tight">Yash Sawhney</a>
           <div className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map(link => {
               const isActive = active === link.href.slice(1);
@@ -77,9 +77,9 @@ export default function App() {
                   key={link.name}
                   href={link.href}
                   aria-current={isActive ? 'true' : undefined}
-                  className={`px-3 py-2 rounded-md transition-colors font-medium hover:bg-black/5 dark:hover:bg-white/5 ${
+                  className={`px-3 py-2 rounded-md text-[13px] transition-colors hover:bg-black/5 dark:hover:bg-white/5 ${
                     isActive
-                      ? 'text-[color:var(--accent)]'
+                      ? 'text-[color:var(--accent)] font-semibold'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                   }`}
                 >
