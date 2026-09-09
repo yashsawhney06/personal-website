@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { SunIcon, MoonIcon } from './components/Icons';
 import Home from './sections/Home';
 import About from './sections/About';
+import Experience from './sections/Experience';
 import Skills from './sections/Skills';
 import Portfolio from './sections/Portfolio';
 import Contact from './sections/Contact';
@@ -9,6 +10,7 @@ import Contact from './sections/Contact';
 const NAV_LINKS = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
   { name: 'Portfolio', href: '#portfolio' },
   { name: 'Contact', href: '#contact' },
@@ -172,6 +174,7 @@ export default function App() {
       <main className="pt-20 md:pt-24 relative z-10">
         <Home />
         <About />
+        <Experience />
         <Skills />
         <Portfolio />
         <Contact />

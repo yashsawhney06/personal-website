@@ -10,9 +10,13 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+body {
+  font-family: 'EB Garamond', ui-serif, Georgia, serif;
+}
+
 h1, h2, h3, h4, .font-display {
-  font-family: 'Comfortaa', 'Nunito', ui-rounded, sans-serif;
-  letter-spacing: -0.01em;
+  font-family: 'EB Garamond', ui-serif, Georgia, serif;
+  letter-spacing: 0;
 }
 
 /* Accent color: white in dark mode, near-black in light mode */
@@ -166,4 +170,30 @@ h1, h2, h3, h4, .font-display {
 
 nav a:hover {
   color: var(--accent);
+}
+
+/* Experience conveyor belt */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
 }

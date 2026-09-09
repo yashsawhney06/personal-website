@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Nunito', 'ui-rounded', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Comfortaa', 'Nunito', 'ui-rounded', 'sans-serif'],
+        sans: ['"EB Garamond"', 'ui-serif', 'Georgia', 'serif'],
+        display: ['"EB Garamond"', 'ui-serif', 'Georgia', 'serif'],
       },
     },
   },
