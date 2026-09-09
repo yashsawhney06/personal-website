@@ -44,7 +44,7 @@ export default function Portfolio() {
         {PROJECTS.map((project, i) => (
           <div
             key={project.title}
-            className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-300 glow-card"
+            className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-300 glow-card"
             style={{ animationDelay: `${i * 100}ms` }}
           >
             <div className={`h-40 bg-gray-200 dark:bg-gray-800 flex justify-center ${
@@ -65,7 +65,7 @@ export default function Portfolio() {
               <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
               <div className="mb-4 flex flex-wrap gap-2">
                 {project.tech.map(t => (
-                  <span key={t} className="inline-block px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-md text-sm font-medium">
+                  <span key={t} className="inline-block px-3 py-1 bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-200 rounded-md text-sm font-medium">
                     {t}
                   </span>
                 ))}
@@ -82,14 +82,14 @@ export default function Portfolio() {
 
       {/* Resume Download Section */}
       <div className="text-center mt-16">
-        <p className="text-cyan-400 font-medium text-lg mb-4">
+        <p className="text-gray-900 dark:text-white font-semibold text-lg mb-4">
           Want the full picture? My resume covers my internships, projects, and coursework in detail.
         </p>
-        <a 
-          href="/Yash-Sawhney Resume.pdf" 
-          target="_blank" 
+        <a
+          href="/Yash-Sawhney Resume.pdf"
+          target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-cyan-400 text-gray-900 dark:text-white hover:bg-cyan-400 hover:text-gray-900 font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+          className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 font-semibold rounded-lg transition-colors duration-200"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

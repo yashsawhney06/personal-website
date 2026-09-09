@@ -46,7 +46,7 @@ export default function Contact() {
   return (
     <section id="contact" className="max-w-2xl mx-auto px-4 py-16">
       <h2 className="text-2xl font-bold mb-8 text-center">Contact</h2>
-      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 flex flex-col gap-4">
         <input
           type="text"
           name="name"
@@ -54,7 +54,7 @@ export default function Contact() {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 transition"
         />
         <input
           type="email"
@@ -63,7 +63,7 @@ export default function Contact() {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 transition"
         />
         <textarea
           name="message"
@@ -72,12 +72,12 @@ export default function Contact() {
           rows="4"
           placeholder="Your Message"
           required
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 transition"
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-cyan-400 hover:bg-cyan-500 text-gray-900 font-semibold py-2 rounded transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+          className="bg-gray-900 hover:bg-gray-700 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-gray-900 font-semibold py-2 rounded transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
@@ -94,7 +94,7 @@ export default function Contact() {
         )}
       </form>
       <div className="flex justify-center gap-6 mt-8">
-        <a href="https://www.linkedin.com/in/yash-saw/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-blue-700 dark:hover:text-blue-400 transition-colors text-2xl">
+        <a href="https://www.linkedin.com/in/yash-saw/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors text-2xl">
           <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.034 0 3.595 1.997 3.595 4.59v5.606zm0 0"/></svg>
         </a>
         <a href="https://github.com/yashsawhney06" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-500 hover:text-black dark:hover:text-white transition-colors text-2xl">

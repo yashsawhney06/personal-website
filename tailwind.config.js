@@ -5,7 +5,12 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Nunito', 'ui-rounded', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Fredoka', 'Nunito', 'ui-rounded', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }; 

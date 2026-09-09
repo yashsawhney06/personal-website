@@ -67,7 +67,7 @@ const ParticleBackground = () => {
 
         ctx.save();
         ctx.globalAlpha = this.opacity * scale;
-        ctx.fillStyle = '#22d3ee'; // Cyan color
+        ctx.fillStyle = '#e2e8f0'; // Soft white
         ctx.beginPath();
         ctx.arc(x, y, size, 0, Math.PI * 2);
         ctx.fill();
@@ -100,7 +100,7 @@ const ParticleBackground = () => {
           
           if (distance < 100) {
             const opacity = (100 - distance) / 100 * 0.1;
-            ctx.strokeStyle = `rgba(34, 211, 238, ${opacity})`;
+            ctx.strokeStyle = `rgba(148, 163, 184, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
@@ -155,7 +155,7 @@ export default function App() {
           <a href="#home" className="font-bold text-lg tracking-tight">Yash Sawhney</a>
           <div className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map(link => (
-              <a key={link.name} href={link.href} className="px-3 py-2 rounded-md hover:text-cyan-400 dark:hover:text-cyan-300 hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-medium">
+              <a key={link.name} href={link.href} className="px-3 py-2 rounded-md hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-medium">
                 {link.name}
               </a>
             ))}

@@ -49,7 +49,7 @@ export default function Home() {
     <section id="home" className="min-h-[80vh] flex items-center justify-center fade-in">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
         <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-          <span className="text-cyan-400 font-medium mb-2 text-lg glow-text">Hello World, I'm</span>
+          <span className="font-semibold mb-2 text-lg glow-text">Hello World, I'm</span>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-2 tracking-tight">
             Yash Sawhney
           </h1>
@@ -60,7 +60,7 @@ export default function Home() {
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
             I am a computer science and economics student who builds data pipelines, trains ML models, and ships products that solve real-world problems!
           </p>
-          <p className="text-cyan-400 font-medium text-lg glow-text">
+          <p className="font-semibold text-lg glow-text">
             Welcome to my portfolio <span role="img" aria-label="wave">👋🏻</span>
           </p>
         </div>
