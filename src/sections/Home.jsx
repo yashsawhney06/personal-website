@@ -42,7 +42,7 @@ const SocialIcons = () => {
 }
 
 export default function Home() {
-    const roles = ["a Computer Science and Economics Student", "a Data & Software Engineer", "a Product & Tech Enthusiast"];
+    const roles = ["a Computer Science and Economics Student", "a Data/Machine Learning Engineer", "a Product & Tech Enthusiast"];
     const typedRoles = useTypingEffect(roles, true);
 
   return (
