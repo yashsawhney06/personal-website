@@ -11,7 +11,7 @@ const PROJECTS = [
   },
   {
     title: 'SwipeWise',
-    image: '/swipewise-project.png',
+    image: '/swipewise-project.jpg',
     description: 'A credit-card portfolio optimizer that computes net annual value across 55 cards and 6 spend categories via greedy selection, paired with a FastAPI recommendation API that validates spend profiles with Pydantic and uses LangChain to generate per-category tradeoffs.',
     tech: ['Python', 'FastAPI', 'LangChain', 'Pydantic'],
     github: null,
@@ -19,7 +19,7 @@ const PROJECTS = [
   },
   {
     title: 'NBA Shot Progression',
-    image: '/nba-project.png',
+    image: '/nba-project.jpg',
     description: 'A machine learning model using YOLOv8 for object detection and XGBoost for shot prediction. The system analyzes defender positions and player statistics to predict NBA shot success rates.',
     tech: ['Python', 'OpenCV', 'Sklearn', 'NBA API'],
     github: 'https://github.com/yashsawhney06/nba-shot-progression',
@@ -47,17 +47,11 @@ export default function Portfolio() {
             className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-300 glow-card"
             style={{ animationDelay: `${i * 100}ms` }}
           >
-            <div className={`h-40 bg-gray-200 dark:bg-gray-800 flex justify-center ${
-              project.title === 'NBA Shot Progression' 
-                ? 'items-center' 
-                : project.title === 'Personal Portfolio'
-                ? 'items-end'
-                : 'items-center'
-            }`}>
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="object-cover h-full w-full" 
+            <div className="h-40 bg-gray-200 dark:bg-gray-800">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="object-cover object-top h-full w-full"
               />
             </div>
             <div className="p-6 flex-1 flex flex-col">
